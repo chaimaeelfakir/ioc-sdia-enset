@@ -2,7 +2,6 @@ package presentation;
 
 import dao.IDao;
 import metier.Imetier;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.InvocationTargetException;
@@ -25,6 +24,7 @@ public class pres_dynamique {
 
             Method setDao = cMetier.getDeclaredMethod("setDao", IDao.class);
             setDao.invoke(metier, dao);
+            System.out.println("presentation dynamique");
             System.out.println("RES : "+metier.calculer());
             scanner.close(); // Fermeture du scanner pour libérer les ressources
         } catch (FileNotFoundException e) {

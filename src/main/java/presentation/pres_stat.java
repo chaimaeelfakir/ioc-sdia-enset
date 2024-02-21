@@ -8,6 +8,7 @@ public class pres_stat {
         DaoImpl dao=new DaoImpl();
         MetierImpl metier=new MetierImpl();
         metier.setDao(dao);
+        System.out.println("Presentation statique");
         System.out.println("Res  "+metier.calculer());
         }
 
